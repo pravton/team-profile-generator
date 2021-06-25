@@ -64,7 +64,6 @@ const promptManager = () => {
         }
     ])
     .then(answers => {
-        answers.role = 'Manager';
         if(answers.addTeamMember === 'Engineer') {
             return promptEngineer(answers);
         } else if (answers.addTeamMember === 'Intern') {
@@ -142,7 +141,6 @@ const promptEngineer = (teamData) => {
         }
     ])
     .then(engineerData => {
-        engineerData.role = 'Engineer';
         teamData.engineers.push(engineerData);
         if(engineerData.addTeamMember === 'Engineer') {
             return promptEngineer(teamData);
@@ -221,7 +219,6 @@ const promptIntern = (teamData) => {
         }
     ])
     .then(internData => {
-        internData.role = 'Intern';
         teamData.interns.push(internData);
         if(internData.addTeamMember === 'Engineer') {
             return internData(teamData);
