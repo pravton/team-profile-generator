@@ -1,0 +1,44 @@
+:root {
+--primary-color: #d6e4f0;
+--secondary-color: #00719e;
+--accent: #f7f7f7;
+--font-color: white;  
+}
+
+body {
+min-height: 100vh;
+background-color: var(--primary-color);
+color: var(--font-color);
+}
+
+.h-300 {
+    height: 300px;
+}
+
+.h-40 {
+    height: 40px;
+}
+
+#employee-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#employee-role {
+    font-size: 20px;
+}
+
+.card-header {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+}
+
+.card-body{
+    background-color: var(--accent);
+    padding: 25px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.value-text {
+    font-weight: bold;
+}
