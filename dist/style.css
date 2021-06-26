@@ -1,6 +1,6 @@
 :root {
---primary-color: #cccccc98;
---secondary-color: red;
+--primary-color: rgba(255, 255, 255, 0.8);
+--secondary-color: rgba(0, 115, 192, 0.836);
 --accent: #b8b8b863;
 --font-color: white;   
 }
@@ -8,8 +8,7 @@
 body {
 min-height: 100vh;
 /* background-color: var(--primary-colsor); */
-color: var(--font-color);
-background-image: url(https://picsum.photos/1890);
+background-image: url(https://picsum.photos/1980);
 }
 
 .h-300 {
@@ -26,7 +25,7 @@ background-image: url(https://picsum.photos/1890);
 
 .header-container {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--primary-color);
     border-radius: 5px;
 }
 
@@ -43,13 +42,14 @@ background-image: url(https://picsum.photos/1890);
     background-color: transparent;
 }
 .card-body{
-    background-color: rgba(255, 255, 255, 0.822);
+    background-color: var(--primary-color);
     padding: 25px;
     border-radius: 0px 0px 5px 5px; 
 }
 
 .card-header {
-    background-color: rgba(239, 239, 255, 0.767);
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 

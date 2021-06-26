@@ -1,5 +1,13 @@
 const inquirer = require('inquirer');
 const Employee = require('./lib/Employee');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
+const templateStructure = require('./src/page-template');
+const {writeFile, copyFile} = require('./src/generate-page');
+
+//Team Array
+const teamMebers = [];
 
 const promptManager = () => {
     return inquirer
@@ -64,21 +72,19 @@ const promptManager = () => {
         }
     ])
     .then(answers => {
+        const teamMember = new Manager(answers.name, answers.id, answers.email, answers.office);
+        teamMebers.push(teamMember);
         if(answers.addTeamMember === 'Engineer') {
-            return promptEngineer(answers);
+            return promptEngineer();
         } else if (answers.addTeamMember === 'Intern') {
-            return promptIntern(answers);
+            return promptIntern();
         } else {
-            return answers;
+            return teamMebers;
         }
     });
 };
 
-const promptEngineer = (teamData) => {
-    // creates a new array of engineers
-    if (!teamData.engineers) {
-        teamData.engineers = [];
-    }
+const promptEngineer = () => {
     return inquirer
     .prompt([
         {
@@ -141,22 +147,19 @@ const promptEngineer = (teamData) => {
         }
     ])
     .then(engineerData => {
-        teamData.engineers.push(engineerData);
+        const teamMember = new Engineer(engineerData.name, engineerData.id, engineerData.email, engineerData.github);
+        teamMebers.push(teamMember);
         if(engineerData.addTeamMember === 'Engineer') {
-            return promptEngineer(teamData);
+            return promptEngineer();
         } else if (engineerData.addTeamMember === 'Intern') {
-            return promptIntern(teamData);
+            return promptIntern();
         } else {
-            return teamData;
+            return teamMebers;
         }
     });
 };
 
-const promptIntern = (teamData) => {
-    // creates a new array of engineers
-    if (!teamData.interns) {
-        teamData.interns = [];
-    }
+const promptIntern = () => {
     return inquirer
     .prompt([
         {
@@ -219,13 +222,14 @@ const promptIntern = (teamData) => {
         }
     ])
     .then(internData => {
-        teamData.interns.push(internData);
+        const teamMember = new Intern(internData.name, internData.id, internData.email, internData.school);
+        teamMebers.push(teamMember);
         if(internData.addTeamMember === 'Engineer') {
-            return internData(teamData);
+            return promptEngineer();
         } else if (internData.addTeamMember === 'Intern') {
-            return promptIntern(teamData);
+            return promptIntern();
         } else {
-            return teamData;
+            return teamMebers;
         }
     });
 };
@@ -233,5 +237,18 @@ const promptIntern = (teamData) => {
 
 promptManager()
     .then(data => {
-        console.log(data);
+       return templateStructure(data);
+    })
+    .then(generatedContent => {
+        return writeFile(generatedContent)
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+        return copyFile();
+    })
+    .then(copyFileResponse => {
+        console.log(copyFileResponse);
+    })
+    .catch(err => {
+        console.log(err)
     });
