@@ -1,14 +1,15 @@
 :root {
---primary-color: #d6e4f0;
---secondary-color: #00719e;
---accent: #f7f7f7;
---font-color: white;  
+--primary-color: #cccccc98;
+--secondary-color: red;
+--accent: #b8b8b863;
+--font-color: white;   
 }
 
 body {
 min-height: 100vh;
-background-color: var(--primary-color);
+/* background-color: var(--primary-colsor); */
 color: var(--font-color);
+background-image: url(https://picsum.photos/1890);
 }
 
 .h-300 {
@@ -17,6 +18,16 @@ color: var(--font-color);
 
 .h-40 {
     height: 40px;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.header-container {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
 }
 
 #employee-name {
@@ -28,17 +39,25 @@ color: var(--font-color);
     font-size: 20px;
 }
 
-.card-header {
-    background-color: var(--secondary-color);
-    color: var(--font-color);
+.card {
+    background-color: transparent;
+}
+.card-body{
+    background-color: rgba(255, 255, 255, 0.822);
+    padding: 25px;
+    border-radius: 0px 0px 5px 5px; 
 }
 
-.card-body{
-    background-color: var(--accent);
-    padding: 25px;
-    border-radius: 0px 0px 5px 5px;
+.card-header {
+    background-color: rgba(239, 239, 255, 0.767);
 }
+
 
 .value-text {
     font-weight: bold;
+}
+
+.opacity-full {
+    position: relative;
+    z-index: 2;
 }
