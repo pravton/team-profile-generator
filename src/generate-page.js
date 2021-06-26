@@ -11,10 +11,10 @@ const writeFile = fileContent => {
 
             // If everything went well, resolve the promise
             resolve(`
-                ╔═╗╦ ╦╔═╗╔═╗╔═╗╔═╗╔═╗┬
-                ╚═╗║ ║║  ║  ║╣ ╚═╗╚═╗│
-                ╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝o
-                A index.html has been successfully generated. Please check the dist folder for the output!`
+╔═╗╦ ╦╔═╗╔═╗╔═╗╔═╗╔═╗┬
+╚═╗║ ║║  ║  ║╣ ╚═╗╚═╗│
+╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝o
+An index.html has been successfully generated. Please check the dist folder for the output!`
             );
         });
     });
@@ -29,7 +29,7 @@ const copyFile = () => {
             }
 
             resolve(
-                "A CSS stylesheet has successfully copied!"
+                "A CSS stylesheet has successfully copied! Please check the dist folder for the output!"
             );
         });
     });

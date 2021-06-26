@@ -4,13 +4,13 @@ const generateTeamCards = (teamArray) => {
     let membersCards = "";
 
     for(let i = 0; i < teamArray.length; i++) {
-        if(teamArray[i].role === 'Manager') {
-            contact = `<li id="emp-contact" class="box mb-3 p-2" >Office Number : <span id="emp-contact" class="value-text"><a href="tel:${teamArray[i].office}">${teamArray[i].office}</span> </li>`;
+        if(teamArray[i].getRole() === 'Manager') {
+            contact = `<li id="emp-contact" class="box mb-3 p-2" >Office Number : <span id="emp-contact" class="value-text"><a href="tel:${teamArray[i].office}">${teamArray[i].office}</a></span> </li>`;
             icon = `<i class="fas fa-mug-hot"></i>`;
-        } else if (teamArray[i].role === 'Engineer') {
-            contact = `<li id="emp-contact" class="box mb-3 p-2" >GitHub : <span id="emp-contact" class="value-text">${teamArray[i].github}</span> </li>`;
+        } else if (teamArray[i].getRole() === 'Engineer') {
+            contact = `<li id="emp-contact" class="box mb-3 p-2" >GitHub : <span id="emp-contact" class="value-text"><a href="https://github.com/${teamArray[i].github}/">${teamArray[i].github}</a></span> </li>`;
             icon = `<i class="fas fa-glasses"></i>`;
-        } else if (teamArray[i].role === 'Intern') {
+        } else if (teamArray[i].getRole() === 'Intern') {
             contact = `<li id="emp-contact" class="box mb-3 p-2" >School : <span id="emp-contact" class="value-text">${teamArray[i].school}</span> </li>`;
             icon = `<i class="fas fa-user-graduate"></i>`;
         }
@@ -19,13 +19,13 @@ const generateTeamCards = (teamArray) => {
             <div class="column transparent is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
                 <div class="card opacity-full">
                     <div class="card-header is-flex-direction-column py-3 px-5">
-                        <h3 id="employee-name" class="is-5">${teamArray[i].name}</h3>
-                        <h4 id="employee-role">${icon}&nbsp; ${teamArray[i].role}</h4>
+                        <h3 id="employee-name" class="is-5">${teamArray[i].getName()}</h3>
+                        <h4 id="employee-role">${icon}&nbsp; ${teamArray[i].getRole()}</h4>
                     </div>
                     <div class="card-body">
                         <ul class="card-body-content">
-                            <li  class="box mb-3 p-2 opacity-full">ID : <span id="id-number" class="value-text"><a href="mailto:${teamArray[i].id}"> ${teamArray[i].id}</span></li>
-                            <li  class="box mb-3 p-2">Email : <span id="email" class="value-text"> ${teamArray[i].email}</span> </li>
+                            <li  class="box mb-3 p-2 opacity-full">ID : <span id="id-number" class="value-text"> ${teamArray[i].getId()}</span></li>
+                            <li  class="box mb-3 p-2">Email : <span id="email" class="value-text"> <a href="mailto:${teamArray[i].getEmail()}">${teamArray[i].getEmail()}</a></span> </li>
                             ${contact}
                         </ul>
                     </div>
