@@ -28,7 +28,7 @@ const promptManager = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'What is the employee ID of the Team Manager',
+            message: 'What is the employee ID of the Team Manager?',
             validate: idInput => {
                 if(!isNaN(idInput)) {
                     return true;
