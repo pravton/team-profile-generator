@@ -26,7 +26,6 @@ Please clone the repo and enter the following command in the terminal
 npm install
 ```
 
-
 ## 🖥️ Usage
 
 You can start and use this application by entering the following command in the terminal
@@ -64,8 +63,6 @@ You can run tests by entering the following command in the terminal
 ```
 npm run test
 ```
-
-
 
 ## ❓ Questions
 
