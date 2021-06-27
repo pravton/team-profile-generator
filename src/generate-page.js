@@ -11,9 +11,11 @@ const writeFile = fileContent => {
 
             // If everything went well, resolve the promise
             resolve(`
+
 ╔═╗╦ ╦╔═╗╔═╗╔═╗╔═╗╔═╗┬
 ╚═╗║ ║║  ║  ║╣ ╚═╗╚═╗│
 ╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝╚═╝o
+            
 An index.html has been successfully generated. Please check the dist folder for the output!`
             );
         });

@@ -64,6 +64,11 @@ const templateStructure = (teamData) => {
             </div>    
         </div>
     </main>
+    <footer class="py-5">
+        <div class="container footer-sec w-80 p-4 is-flex is-justify-content-center">
+            <p class="footer-text">Made with ❤️ by <a href="https://clintonsf.com" target="_blank">Clinton</a> </p>
+        </div>
+    </footer>
 </body>
 </html>
     `

@@ -28,7 +28,7 @@ const promptManager = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'Enter the employee ID of the Team Manager?',
+            message: 'What is the employee ID of the Team Manager',
             validate: idInput => {
                 if(!isNaN(idInput)) {
                     return true;
@@ -41,7 +41,7 @@ const promptManager = () => {
         {
             type: 'input',
             name: 'email',
-            message: 'Enter the email address of the Manager?',
+            message: 'What is the email address of the Manager?',
             validate: emailInput => {
                 if(emailInput && (emailInput.includes('@' && '.'))) {
                     return true;
@@ -54,7 +54,7 @@ const promptManager = () => {
         {
             type: 'input',
             name: 'office',
-            message: 'Enter the office number of the Manager?',
+            message: 'What is the office number of the Manager?',
             validate: officeInput => {
                 if(!isNaN(officeInput)) {
                     return true;
@@ -85,6 +85,12 @@ const promptManager = () => {
 };
 
 const promptEngineer = () => {
+    console.log(`
+|==============================|
+|===== Add a New Engineer =====|
+|==============================|
+    `
+    );
     return inquirer
     .prompt([
         {
@@ -103,7 +109,7 @@ const promptEngineer = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'Enter the employee ID of the Engineer?',
+            message: 'What is the employee ID of the Engineer?',
             validate: idInput => {
                 if(!isNaN(idInput)) {
                     return true;
@@ -116,7 +122,7 @@ const promptEngineer = () => {
         {
             type: 'input',
             name: 'email',
-            message: 'Enter the email address of the Engineer?',
+            message: 'What is the email address of the Engineer?',
             validate: emailInput => {
                 if(emailInput && (emailInput.includes('@' && '.'))) {
                     return true;
@@ -129,7 +135,7 @@ const promptEngineer = () => {
         {
             type: 'input',
             name: 'github',
-            message: 'Enter the github username of the Engineer.',
+            message: 'What is the github username of the Engineer?',
             validate: githubInput => {
                 if(githubInput) {
                     return true;
@@ -160,6 +166,12 @@ const promptEngineer = () => {
 };
 
 const promptIntern = () => {
+    console.log(`
+|==============================|
+|====== Add a New Intern ======|
+|==============================|
+    `
+        )
     return inquirer
     .prompt([
         {
@@ -178,7 +190,7 @@ const promptIntern = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'Enter the employee ID of the Intern?',
+            message: 'What is the employee ID of the Intern?',
             validate: idInput => {
                 if(!isNaN(idInput)) {
                     return true;
@@ -191,7 +203,7 @@ const promptIntern = () => {
         {
             type: 'input',
             name: 'email',
-            message: 'Enter the email address of the Intern?',
+            message: 'What is the email address of the Intern?',
             validate: emailInput => {
                 if(emailInput && (emailInput.includes('@' && '.'))) {
                     return true;
