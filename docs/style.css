@@ -1,0 +1,78 @@
+:root {
+--primary-color: rgba(255, 255, 255, 0.85);
+--secondary-color: rgba(0, 97, 161, 0.85);
+--font-color: white;   
+}
+
+/* Body Style */
+body {
+min-height: 100vh;
+background-image: url(https://picsum.photos/1890);
+background-position: center;
+background-size: cover;
+}
+
+.h-300 {
+    height: 300px;
+}
+
+.h-40 {
+    height: 40px;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.header-container {
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+#employee-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+#employee-role {
+    font-size: 20px;
+}
+
+/* Card Style */
+.card {
+    background-color: transparent;
+}
+.card-body{
+    background-color: var(--primary-color);
+    padding: 25px;
+    border-radius: 0px 0px 5px 5px; 
+}
+
+.card-header {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+}
+
+.value-text {
+    font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+.footer-sec {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 770px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+}
