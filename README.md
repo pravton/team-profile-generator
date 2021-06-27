@@ -1,5 +1,5 @@
 
-# Portfolio Generator
+# Team Profile Generator
 ![badge](https://img.shields.io/badge/licence-MIT-green) ![badge](https://img.shields.io/badge/-HTML-red) ![badge](https://img.shields.io/badge/-CSS-red) ![badge](https://img.shields.io/badge/-Javascript-red) ![badge](https://img.shields.io/badge/-Node.js-red) 
 
 ## 📜 Description
