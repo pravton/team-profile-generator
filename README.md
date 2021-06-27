@@ -9,6 +9,9 @@ A command-line application that takes in information about employees on a softwa
 
 - [Installation](#%EF%B8%8F-installation)
 - [Usage](#%EF%B8%8F-usage)
+- [Walkthrough Video](#%EF%B8%8F-walkthrough-video)
+- [Final Output GIF](#%EF%B8%8F-final-output-gif)
+- [Final Output HTML](#%EF%B8%8F-final-output-html)
 - [License](#-license)
 - [Contributing](#-contributing)
 - [Tests](#-tests)
@@ -24,7 +27,6 @@ npm install
 ```
 
 
-
 ## 🖥️ Usage
 
 You can start and use this application by entering the following command in the terminal
@@ -33,7 +35,17 @@ You can start and use this application by entering the following command in the 
 node index
 ```
 
+## 🎞️ Walkthrough Video
 
+[**Click Here**](https://www.youtube.com/watch?v=UfeP7XZc1xM) to view the walkthrough video.
+
+## ▶️ Final Output GIF
+
+![Final Output](./src/images/final-output.gif "Final output of the project")
+
+## ⏸️ Final Output HTML
+
+![Final Output](./src/images/final-output-img.JPG "Final output of the project")
 
 ## 📝 License
 
